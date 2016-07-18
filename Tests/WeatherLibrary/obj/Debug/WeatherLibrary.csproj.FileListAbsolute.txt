@@ -1,0 +1,4 @@
+C:\Users\tc34561\Desktop\Life's Project\Tests\WeatherLibrary\bin\Debug\WeatherLibrary.dll
+C:\Users\tc34561\Desktop\Life's Project\Tests\WeatherLibrary\bin\Debug\WeatherLibrary.pdb
+C:\Users\tc34561\Desktop\Life's Project\Tests\WeatherLibrary\obj\Debug\WeatherLibrary.dll
+C:\Users\tc34561\Desktop\Life's Project\Tests\WeatherLibrary\obj\Debug\WeatherLibrary.pdb

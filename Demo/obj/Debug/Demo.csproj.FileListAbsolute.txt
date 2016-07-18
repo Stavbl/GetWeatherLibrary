@@ -1,0 +1,6 @@
+C:\Users\tc34561\Desktop\Life's Project\Demo\bin\Debug\Demo.exe.config
+C:\Users\tc34561\Desktop\Life's Project\Demo\obj\Debug\Demo.csprojResolveAssemblyReference.cache
+C:\Users\tc34561\Desktop\Life's Project\Demo\bin\Debug\Demo.exe
+C:\Users\tc34561\Desktop\Life's Project\Demo\bin\Debug\Demo.pdb
+C:\Users\tc34561\Desktop\Life's Project\Demo\obj\Debug\Demo.exe
+C:\Users\tc34561\Desktop\Life's Project\Demo\obj\Debug\Demo.pdb

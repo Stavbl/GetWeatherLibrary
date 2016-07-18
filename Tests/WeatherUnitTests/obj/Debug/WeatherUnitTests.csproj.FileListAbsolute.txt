@@ -1,0 +1,7 @@
+C:\Users\tc34561\Desktop\Life's Project\Tests\WeatherUnitTests\bin\Debug\WeatherUnitTests.dll
+C:\Users\tc34561\Desktop\Life's Project\Tests\WeatherUnitTests\bin\Debug\WeatherUnitTests.pdb
+C:\Users\tc34561\Desktop\Life's Project\Tests\WeatherUnitTests\bin\Debug\WeatherLibrary.dll
+C:\Users\tc34561\Desktop\Life's Project\Tests\WeatherUnitTests\bin\Debug\WeatherLibrary.pdb
+C:\Users\tc34561\Desktop\Life's Project\Tests\WeatherUnitTests\obj\Debug\WeatherUnitTests.csprojResolveAssemblyReference.cache
+C:\Users\tc34561\Desktop\Life's Project\Tests\WeatherUnitTests\obj\Debug\WeatherUnitTests.dll
+C:\Users\tc34561\Desktop\Life's Project\Tests\WeatherUnitTests\obj\Debug\WeatherUnitTests.pdb
