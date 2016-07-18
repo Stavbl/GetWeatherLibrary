@@ -45,12 +45,23 @@ getting the WeatherData From the weather data service.
 This function gets City based location `Location location = new CityLocation("city", "country code")` (country code is not obligatory) & Returns [WeatherData](#weatherdata) type object.
 
 ##### `void SetUnitsFormat(Units unit);`
+This function sets the unit of measure for the API
+inputs could be:
+- metric `Units.Celsius`
+- imperial `Units.Fahrenheit`
+- Temperture in Kelvin Units by Default
+
+``` c#
+weatherService.SetUnitsFormat(Units.Option);
+```
+Only After getting the weather data service!!!
 
 ## Tests
 
-Describe and show how to run the tests with code examples.
+There is a project called `WeatherUnitTest`
+just run tests as Unit test Project.
+it will run:
 
+`GetWeatherDataValueTest` comparing live web requset from openweathermap.org to one gotten from the library
 
-## License
-
-A short snippet describing the license (MIT, Apache, etc.)
+`SetTempUnits` comparing live web requset from openweathermap.org to one gotten from the library using metric unit
