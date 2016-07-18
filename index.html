@@ -1,0 +1,137 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>GetWeatherLibrary by Stavbl</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-dark.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/main.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+
+      <header>
+        <h1>GetWeatherLibrary</h1>
+        <p></p>
+      </header>
+
+      <div id="banner">
+        <span id="logo"></span>
+
+        <a href="https://github.com/Stavbl/GetWeatherLibrary" class="button fork"><strong>View On GitHub</strong></a>
+        <div class="downloads">
+          <span>Downloads:</span>
+          <ul>
+            <li><a href="https://github.com/Stavbl/GetWeatherLibrary/zipball/master" class="button">ZIP</a></li>
+            <li><a href="https://github.com/Stavbl/GetWeatherLibrary/tarball/master" class="button">TAR</a></li>
+          </ul>
+        </div>
+      </div><!-- end banner -->
+
+    <div class="wrapper">
+      <nav>
+        <ul></ul>
+      </nav>
+      <section>
+        <h2>
+<a id="getweatherlibrary" class="anchor" href="#getweatherlibrary" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>GetWeatherLibrary</h2>
+
+<p>GetWeatherLibrary is an generic C# Library for developers to get weather data from around the world.</p>
+
+<h2>
+<a id="code-example" class="anchor" href="#code-example" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Code Example</h2>
+
+<div class="highlight highlight-source-cs"><pre><span class="pl-c">// get the weather data in London using the GetWeatherData function</span>
+
+OpenWeatherMapDataService.SetAppId(<span class="pl-s"><span class="pl-pds">"</span>App ID that u got by signing in to openweathermap.org<span class="pl-pds">"</span></span>);
+IWeatherDataService weatherService = WeatherDataServiceFactory.GetWeatherDataService(WeatherDataServiceFactoryType.OPEN_WEATHER_MAP);
+
+<span class="pl-c">//(weatherService as OpenWeatherMapDataService).SetAppId("cb3f6e62c433d931e54b743eb177c694");</span>
+
+Location locationTest = <span class="pl-k">new</span> CityLocation(<span class="pl-s"><span class="pl-pds">"</span>London<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>UK<span class="pl-pds">"</span></span>);
+WeatherData weatherDataToTest = weatherService.GetWeatherData(locationTest);</pre></div>
+
+<h6>
+<a id="weatherdata" class="anchor" href="#weatherdata" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>WeatherData:</h6>
+
+<p>Now WeatherData holds up weather information like: </p>
+
+<ul>
+<li>int clouds;</li>
+<li>double lon, lat;</li>
+<li>string city, country;</li>
+<li>double temp, windSpeed;</li>
+<li>int humidity;</li>
+<li>DateTime dateTime;</li>
+</ul>
+
+<h2>
+<a id="motivation" class="anchor" href="#motivation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Motivation</h2>
+
+<p>This implimintaion of GetWeather Library was given to me as a school assignment in my 3rd year BSc in Software Engineering by Shenkar College.</p>
+
+<h2>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Installation</h2>
+
+<p>If using the OPEN_WEATHER_MAP Data Source U must sign in on <a href="openweathermap.org">openweathermap.org</a> and Set the given App ID before 
+getting the WeatherData From the weather data service.</p>
+
+<div class="highlight highlight-source-cs"><pre>  <span class="pl-c">// get the weather data in London using the GetWeatherData function</span>
+
+  OpenWeatherMapDataService.SetAppId(<span class="pl-s"><span class="pl-pds">"</span>Your App ID...<span class="pl-pds">"</span></span>);
+  IWeatherDataService weatherService = WeatherDataServiceFactory.GetWeatherDataService(WeatherDataServiceFactoryType.OPEN_WEATHER_MAP);</pre></div>
+
+<h2>
+<a id="api-reference" class="anchor" href="#api-reference" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>API Reference</h2>
+
+<h5>
+<a id="weatherdata-getweatherdatalocation-location" class="anchor" href="#weatherdata-getweatherdatalocation-location" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><code>WeatherData GetWeatherData(Location location);</code>
+</h5>
+
+<p>This function gets City based location <code>Location location = new CityLocation("city", "country code")</code> (country code is not obligatory) &amp; Returns <a href="#weatherdata">WeatherData</a> type object.</p>
+
+<h5>
+<a id="void-setunitsformatunits-unit" class="anchor" href="#void-setunitsformatunits-unit" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><code>void SetUnitsFormat(Units unit);</code>
+</h5>
+
+<p>This function sets the unit of measure for the API
+inputs could be:</p>
+
+<ul>
+<li>metric <code>Units.Celsius</code>
+</li>
+<li>imperial <code>Units.Fahrenheit</code>
+</li>
+<li>Temperture in Kelvin Units by Default</li>
+</ul>
+
+<div class="highlight highlight-source-cs"><pre>weatherService.SetUnitsFormat(Units.Option);</pre></div>
+
+<p>Only After getting the weather data service!!!</p>
+
+<h2>
+<a id="tests" class="anchor" href="#tests" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Tests</h2>
+
+<p>There is a project called <code>WeatherUnitTest</code>
+just run tests as Unit test Project.
+it will run:</p>
+
+<p><code>GetWeatherDataValueTest</code> comparing live web requset from openweathermap.org to one gotten from the library</p>
+
+<p><code>SetTempUnits</code> comparing live web requset from openweathermap.org to one gotten from the library using metric unit</p>
+      </section>
+      <footer>
+        <p>Project maintained by <a href="https://github.com/Stavbl">Stavbl</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
+  </body>
+</html>
